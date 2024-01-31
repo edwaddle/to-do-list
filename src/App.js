@@ -6,7 +6,7 @@ const LOCAL_STORAGE_KEY = 'todoApp.todos'
 function App() {
   const [todos, setTodos] = useState([])
   const todoNameRef = useRef()
-
+  
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
     if (storedTodos) setTodos(prevTodos => [...prevTodos, ...storedTodos]);
